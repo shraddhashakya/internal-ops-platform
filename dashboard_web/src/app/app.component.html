@@ -1,0 +1,20 @@
+<!-- Mobile menu button -->
+<button class="md:hidden p-4 top-4 left-4" (click)="isMenuOpen = !isMenuOpen">
+  ☰
+</button>
+<div class="flex h-screen bg-gray-100">
+  <!-- Sidebar -->
+  <app-sidebar class="hidden md:block w-64 bg-white shadow-lg"></app-sidebar>
+
+  <!-- Mobile Sidebar -->
+  <div *ngIf="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" (click)="isMenuOpen = false">
+    <div class="absolute left-0 top-0 w-64 h-full bg-white shadow-lg z-50" (click)="$event.stopPropagation()">
+      <app-sidebar></app-sidebar>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6 overflow-y-auto">
+    <router-outlet></router-outlet>
+  </main>
+</div>

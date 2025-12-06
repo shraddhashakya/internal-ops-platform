@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #A4EA02;
+  --color-secondary: #515251;
+
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #1A1A1A;
+
+  --color-text-dark: #232422;
+  --color-text-light: #FFFFFF;
+
+  --color-open: #A4EA02;
+  --color-inprogress: #d4aa2e;
+  --color-closed: #e62838;
+
+
+}
+
+/* Dark mode overrides (optional) */
+.dark {
+  --color-background-light: #1A1A1A;
+  --color-text-dark: #FFFFFF;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

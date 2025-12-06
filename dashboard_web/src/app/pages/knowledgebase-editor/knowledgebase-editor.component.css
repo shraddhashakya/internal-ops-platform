@@ -1,0 +1,16 @@
+
+.preview-output {
+  /* Mimics Tailwind's leading-relaxed class */
+  line-height: 1.625; 
+}
+
+
+@media (max-width: 768px) {
+  /* * We use :host with ::ng-deep to override the package's internal height 
+   * setting on small screens, matching the original responsive behavior.
+   */
+  :host ::ng-deep .angular-editor-wrapper {
+    min-height: 150px !important; 
+    height: 150px !important; 
+  }
+}

@@ -1,0 +1,11 @@
+<div class="max-w-3xl mx-auto p-4 text-left">
+  <ul class="space-y-2 list-none">
+    <li *ngFor="let log of logs" class="p-2 rounded shadow-sm break-words flex border-l-4"
+      [ngClass]="{ 'border-blue-600 bg-blue-50': log.type === 'INFO', 'border-red-600 bg-red-50': log.type === 'ERROR', 'border-yellow-500 bg-yellow-50': log.type === 'WARN', 'border-gray-500 bg-gray-50': log.type === 'DEBUG' }">
+      <div> <span class="font-semibold text-sm">{{ log.type }}</span> <span class="ml-2 text-xs text-gray-500">{{
+          log.timestamp }}</span>
+        <div class="mt-1 text-sm">{{ log.message }}</div>
+      </div>
+    </li>
+  </ul>
+</div>
